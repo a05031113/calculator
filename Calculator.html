@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="layout.css" />
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="out">
+        <div class="calregion">
+            <div class="element">
+                <div class="cal" id="ans"></div>
+                <div onclick="AC()" class="button">AC</div>
+                <div onclick="trans()" class="button">+/-</div>
+                <div onclick="per()" class="button">%</div>
+                <div onclick="divide()" class="button">/</div>
+                <div onclick="seven()" class="button">7</div>
+                <div onclick="eight()" class="button">8</div>
+                <div onclick="nine()" class="button">9</div>
+                <div onclick="mul()" class="button">*</div>
+                <div onclick="four()" class="button">4</div>
+                <div onclick="five()" class="button">5</div>
+                <div onclick="six()" class="button">6</div>
+                <div onclick="minus()" class="button">-</div>
+                <div onclick="one()" class="button">1</div>
+                <div onclick="two()" class="button">2</div>
+                <div onclick="three()" class="button">3</div>
+                <div onclick="plus()" class="button">+</div>
+                <div onclick="zero()" class="zero">0</div>
+                <div onclick="point()" class="button">.</div>
+                <div onclick="equal()" class="button">=</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var n1 = [];
+        var n2 = [];
+        var op =[];
+        let num1 = 0;
+        let num2 = 0;
+        var a = document.getElementById("ans");
+       
+
+        function AC(){
+            n1 = [];
+            n2 = [];
+            op =[];
+            num1 = 0;
+            num2 = 0;
+            a.innerHTML="";
+        }
+        // 先裝數字到n1 and n2
+        function zero(){
+            if (op.length==0){
+                n1.push("0");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("0");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function one(){
+            if (op.length==0){
+                n1.push("1");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("1");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function two(){
+            if (op.length==0){
+                n1.push("2");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("2");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function three(){
+            if (op.length==0){
+                n1.push("3");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("3");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function four(){
+            if (op.length==0){
+                n1.push("4");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("4");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function five(){
+            if (op.length==0){
+                n1.push("5");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("5");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function six(){
+            if (op.length==0){
+                n1.push("6");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("6");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function seven(){
+            if (op.length==0){
+                n1.push("7");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("7");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function eight(){
+            if (op.length==0){
+                n1.push("8");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("8");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        function nine(){
+            if (op.length==0){
+                n1.push("9");
+                let dis = "";
+                for(i=0; i<n1.length; i++){
+                    dis+=n1[i];
+                }
+                a.innerHTML=dis;
+            }else{
+                n2.push("9");
+                let dis = "";
+                for(i=0; i<n2.length; i++){
+                    dis+=n2[i];
+                }
+                a.innerHTML=dis;
+            }
+        }
+        // 把運算符號加到op
+        function plus(){
+            op.push("+");
+        }
+        function minus(){
+            op.push("-");
+        }
+        function mul(){
+            op.push("*")
+        }
+        function divide(){
+            op.push("/")
+        }
+        function trans(){
+            result = result*-1;
+            // console.log("result", result);
+            num1 = result;
+            num2 = 0;
+            n1 = [];
+            n2 = [];
+            a.innerHTML=result
+        }
+        function per(){
+            result = result/100;
+            // console.log("result", result);
+            num1 = result;
+            num2 = 0;
+            n1 = [];
+            n2 = [];
+            a.innerHTML=result
+        }
+
+        // 加小數點
+        function point(){
+            if (op.length==0){
+                if(n1.indexOf(".")==-1){
+                    n1.push(".");
+                }
+            }else{
+                if(n2.indexOf(".")==-1){
+                    n2.push(".");
+                }
+            }
+        }
+
+        // 進行運算
+        function equal(){
+            let ispoint1=n1.indexOf(".")
+            let ispoint2=n2.indexOf(".")
+
+            // num1
+            if (num1==0){ // 確認num1沒有數字
+                if (ispoint1==-1){ // 無小數點
+                    for (i=0; i<n1.length; i++){
+                        num1+=parseInt(n1[i])*10**(n1.length-1-i);
+                    }
+                }else{ // 有小數點
+                    for (i=0; i<ispoint1; i++){
+                        num1+=parseInt(n1[i])*10**(ispoint1-1-i);
+                    }
+                    for (i=ispoint1+1; i<n1.length; i++){
+                        num1+=parseInt(n1[i])*10**(ispoint1-i);
+                    }
+                }
+            }
+            
+            // num2
+            if (ispoint2==-1){ // 無小數點
+                for (i=0; i<n2.length; i++){
+                    num2+=parseInt(n2[i])*10**(n2.length-1-i);
+                }
+            }else{ // 有小數點
+                for (i=0; i<ispoint2; i++){
+                    num2+=parseInt(n2[i])*10**(ispoint2-1-i);
+                }
+                for (i=ispoint2+1; i<n2.length; i++){
+                    num2+=parseInt(n2[i])*10**(ispoint2-i);
+                }
+            }
+            // console.log(n1, num1)
+            // console.log(n2, num2)
+            // console.log(op)
+            if (op[0]=="+"){
+                op.pop();
+                result = num1+num2;
+                // console.log(result);
+                num1 = result;
+                num2 = 0;
+                n1 = [];
+                n2 = [];
+            }else if (op[0]=="-"){
+                op.pop();
+                result = num1-num2;
+                // console.log(result);
+                num1 = result;
+                num2 = 0;
+                n1 = [];
+                n2 = [];
+            }else if (op[0]=="*"){
+                op.pop();
+                result = num1*num2;
+                // console.log(result);
+                num1 = result;
+                num2 = 0;
+                n1 = [];
+                n2 = [];
+            }else if (op[0]=="/"){
+                op.pop();
+                result = num1/num2;
+                // console.log(result);
+                num1 = result;
+                num2 = 0;
+                n1 = [];
+                n2 = [];
+            }else if (op[0]=="@"){
+                op.pop();
+                result = result*-1;
+                // console.log(result);
+                num1 = result;
+                num2 = 0;
+                n1 = [];
+                n2 = [];
+            }else{
+                result = num1
+                console.log(result)
+            }
+            a.innerHTML=result
+        }
+    </script>
+</body>
+</html>
